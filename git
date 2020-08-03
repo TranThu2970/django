@@ -1,0 +1,31 @@
+- git config --list
+- git config --global user.username TranThu2970
+- check:
+	git config user.username
+- git config --global user.email ak2970.mta@gmail.com
+- git config user.email
+- git config --global user.password conbac2960
+* xóa bỏ (chọn đối tượng cần xóa):
+	- git config --global  --unset user.password
+* Clone:
+	- mở thư mục chứa trong terminal
+	- c1: git clone https://.....
+	- c2: git clone https://..... newname
+* add new respository
+* Theo dõi sự thay đổi trong respository
+	- git init
+* Lệnh git status:
+	- Vào một resposity cụ thể=> mở in terminal
+	- git status			<xem có file nào đã sửa>
+	- git add .			<add lên các file đã sửa>
+	- git status			<check lại>
+	- git commit -m "modify example"
+*commit:
+	-git add -A			<thêm tất cả các file đã thay đổi vào để chuẩn bị commit>
+	- git commit -m "second commit"
+	- gộp các phần lại một câu: git commit -a -m "flkdjfkdjfd"
+* Tao local respository
+	- git init
+	- git add README.md
+	- git add .
+	- git commit -m "mmmmm"
