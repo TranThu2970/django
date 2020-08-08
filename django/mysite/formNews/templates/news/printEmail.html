@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            border: 1px solid rgb(55, 2, 245);
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>Tiêu đề</td>
+            <td>Email</td>
+            <td>Nội dung</td>
+            <td>CC</td>
+        </tr>
+        <tr>
+            <!--
+            <td>{{ td }}</td>
+            <td>{{ em }}</td>
+            <td>{{ nd }}</td>
+            <td>{{ c }}</td>
+            -->
+            <td>{{ data_email.title }}</td>
+            <td>{{ data_email.email }}</td>
+            <td>{{ data_email.content }}</td>
+            <td>{{ data_email.cc }}</td>           
+        </tr>        
+    </table>
+    <a href="{% url 'news:email' %}">Soạn email khác</a>
+</body>
+</html>

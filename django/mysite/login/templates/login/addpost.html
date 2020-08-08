@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="addpost">
+        <form action="{% url 'login:addpost' %}" method="post">
+            {% csrf_token %}
+            
+            {{ pf }}
+            <input type="submit" value="Thêm">
+            <a href="{% url 'polls' %}">Trang chủ</a>
+        </form>
+    </div>
+</body>
+</html>
