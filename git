@@ -7,7 +7,7 @@
 - git config --global user.password conbac2960
 * xóa bỏ (chọn đối tượng cần xóa):
 	- git config --global  --unset user.password
-* Clone:
+# Clone:
 	- mở thư mục chứa trong terminal
 	- c1: git clone https://.....
 	- c2: git clone https://..... newname
@@ -24,8 +24,47 @@
 	-git add -A			<thêm tất cả các file đã thay đổi vào để chuẩn bị commit>
 	- git commit -m "second commit"
 	- gộp các phần lại một câu: git commit -a -m "flkdjfkdjfd"
-* Tao local respository
+## Tao local respository
 	- git init
 	- git add README.md
 	- git add .
 	- git commit -m "mmmmm"
+	- Đẩy lên nhánh mới hoàn toàn: git remote add origin https://github.com/TranThu2970/django.git
+	- Đẩy lên nhánh master:        git push -u origin master
+	- lỗi thì dùng cái này: git push origin master --force
+* Xem lịch sử git log:
+	- git log
+	- Xem trên một dòng: git log --oneline
+* git reset đưa con trỏ head về một vị trí cụ thể:
+	- git reset mã_code_log
+	- git status
+	- reset hard sẽ bị mất hết dữ liệu đến thời điểm mã commit: git reset --hard mã_commit
+*checkout mã commit:
+	- git checkout mã_commit: quay lại trạng thái đó để xem
+* xem n commit sau cùng:
+	- git log -n
+	
+* git commit --amend
+* xem từng thay đổi trong commit
+	- git log --oneline
+	- git log -p
+	
+* git reset Head: bỏ cái tên không đưa vào commit
+--	git add *
+	git status
+	git reset HEAD --tên file
+* Tạo nhánh:
+	git branch tênNhanh
+* Đổi tên nhánh:<khi ta đang ở trong nhánh đó>
+	git branch -m ten1m
+	git branch
+* ĐỔi tên khi đang ở trong nhánh khác:
+	git branch -m ten2 ten2m
+	git branch
+* đổi nhánh
+	git checkout ten1
+	git checkout master (về master)
+* tạo và nhảy sang luôn
+	git checkout -b ten5
+	
+	
