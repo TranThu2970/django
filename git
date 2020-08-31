@@ -25,11 +25,11 @@
 	- git commit -m "second commit"
 	- gộp các phần lại một câu: git commit -a -m "flkdjfkdjfd"
 ## Tao local respository
-	- git init
+	[- git init]
 	- git add README.md
 	- git add .
 	- git commit -m "mmmmm"
-	- Đẩy lên nhánh mới hoàn toàn: git remote add origin https://github.com/TranThu2970/django.git
+	[- Đẩy lên nhánh mới hoàn toàn: git remote add origin https://github.com/TranThu2970/django.git]
 	- Đẩy lên nhánh master:        git push -u origin master
 	- lỗi thì dùng cái này: git push origin master --force
 * Xem lịch sử git log:
