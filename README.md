@@ -16,3 +16,7 @@ PROCESS:
             3 - Edit Item click - Prefill form and change submit URL
             4 - Delete Item - Send item id to delete URL
             5 - Cross out completed task - Event handle updated item
+            
+# basic
+- tutorial about django
+- view readme.md in folder
