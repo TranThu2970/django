@@ -1,0 +1,14 @@
+{% extends 'accounts/main.html' %}
+
+
+{% block content %}
+<form class="  text-center mt-3" action="" method="POST">
+    {% csrf_token %}
+
+    {{ formset.management_form }}
+    {% for form in formset %}
+        <p>{{form}}</p>
+    {% endfor %}
+    <input class="btn btn-sm btn-info" type="submit" value="Create">
+</form>
+{% endblock %}
