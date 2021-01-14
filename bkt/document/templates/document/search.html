@@ -1,0 +1,38 @@
+{% extends 'document/main.html' %}
+
+{% block content %}
+<!--Header-->
+<section class="detail-section">
+    <div class="container">
+        <div class="row justify-content-center mb-2">
+            <div class="col-md-7 heading-section text-center ftco-animate">
+            <span class="subheading">Ban Kỹ Thuật</span>
+            <h3 style="color: #162d61; font-weight: bold;">Tìm kiếm tài liệu và hỏng hóc</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--Search form-->
+<section class="search-section" >
+    <div class="row">
+        <div class="col">
+            <div class="card card-body m-3">
+                <form method="get">
+                    {{myFilter.form}}
+                    <button class="btn btn-outline-primary" type="submit">Tìm kiếm</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        {% for contentB in contentBs %}
+            <p><a href="">{{contentB.name}}</a></p>
+            
+        {% endfor %}
+    </div>
+</section>
+
+
+{% endblock %}

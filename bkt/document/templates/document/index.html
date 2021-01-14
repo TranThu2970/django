@@ -1,0 +1,55 @@
+{% extends 'document/main.html' %}
+
+{% block content %}
+	<!--Introduction-->
+	<section class="hero-wrap" style="background-image: url('static/document/images/background.jpg');" data-stellar-background-ratio="0.3">
+		<div class="overlay"></div>
+		<div class="container">
+		<div class="row no-gutters slider-text align-items-center">
+			<div class="col-md-10 col-lg-7 ftco-animate d-flex align-items-end">
+			<div class="text">
+				<h1 class="mb-4">Chính quy <span>Tinh nhuệ </span>Hiện đại</h1>
+				<p style="font-size: 28px;">“Quản lý, khai thác vũ khí, trang bị kỹ thuật<br/> tốt, bền, an toàn, tiết kiệm và an toàn giao thông”</p>
+				<div class="d-flex meta ">
+					<div class=""><p class="mb-0"><a href="{% url 'search' %}" style="font-size: 24px; font-weight: 800;" class="btn btn-outline-info py-3 px-2 px-md-4">Tìm kiếm tài liệu & Hỏng hóc</a></p></div>
+					<!-- <a href="#" class="d-flex align-items-center button-link">
+						<div class="button-video d-flex align-items-center justify-content-center">
+							<span class="fa fa-play"></span>
+						</div>
+						<span>Watch our video</span>
+					</a> -->
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!--Các loại khí tài được biên chế-->
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center mb-2">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+				<span class="subheading">Ban Kỹ Thuật</span>
+				<h3 style="color: #162d61; font-weight: bold;">KHÍ TÀI ĐƯỢC BIÊN CHẾ</h3>
+				</div>
+			</div>
+
+			<div class="row">
+				{% for radar in radars %}
+					<div class="col-md-4 ftco-animate">
+						<div class="block-7">
+							<div class="img" style="background-image: url({{radar.avatar.url}});"></div>
+
+							<div class="d-lg-flex align-items-center w-100 bg-light py-2 ">	
+								<p class="w-100 mb-0">
+								<a href="{% url 'detail' radar.slug %}" style="font-size: 24px; font-weight: 500;" class="btn btn-outline-info d-block px-2 py-1">{{radar.name}}</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endblock %}
+    
