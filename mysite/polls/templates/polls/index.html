@@ -1,0 +1,12 @@
+{% extends 'polls/base.html' %}
+{% block title%}Hiển thị{% endblock %}
+{% block content %}
+    <h1>Hello Word!</h1>
+    <p>An example web page, which is created by <b>{{ name }}</b></p>
+    <h2>My property is:</h2>
+    <ul>
+        {% for item in property %}
+            <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

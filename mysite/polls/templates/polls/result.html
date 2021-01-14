@@ -1,0 +1,14 @@
+{% extends 'polls/base.html' %}
+{% block title %}Kết quả bình chọn{% endblock %}
+
+{% block content %}
+    {% if q.choice_set.all %}
+        <h2>{{q.question_text}}</h2>
+        {% for item in q.choice_set.all %}
+            <li>{{item.choice_text}}: {{item.vote}}</li>
+        {% endfor %}
+        <a href="{% url 'list' %}">Vote tiếp</a>
+    {% else %} 
+        <p>Không có dữ liệu</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'accounts/main.html' %}
+
+
+{% block content %}
+<h5 class="text-center mt-3">Infomations of {{request.user.customer.name}}</h5>
+{% include 'accounts/status.html' %}
+<div class="m-3">
+    <h5 class="text-center">LIST of ORDERS</h5>
+    <hr>
+    <div class="card card-body">
+        <a class="btn btn-primary btn-sm btn-block" href="">Create Order</a>
+        <table class="table table-sm">
+            <tr>
+                <th>Product</th>
+                <th>Note</th>
+                <th>Date Ordered</th>
+                <th>Status</th>
+            </tr>
+            {% for order in orders %}
+                <tr>
+                    <td>{{order.product}}</td>
+                    <td>{{order.note}}</td>
+                    <td>{{order.date_created}}</td>
+                    <td>{{order.status}}</td>
+
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}
