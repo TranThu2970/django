@@ -51,7 +51,7 @@ monotonic==1.5
 more-itertools==4.2.0
 mysqlclient==1.4.6
 netifaces==0.10.4
-numpy==1.17.4
+numpy==1.22.0
 oauthlib==3.1.0
 olefile==0.46
 paramiko==2.6.0
